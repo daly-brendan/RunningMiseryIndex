@@ -8,7 +8,8 @@ let weather = {
         + city 
         + "&aqi=no"
         ).then((response) => response.json())
-        .then((data) => this.displayWeather(data));
+        .then((data) => this.displayWeather(data))
+        referrerPolicy: "unsafe_url";
     },
     displayWeather: function(data) {
         const { name } = data.location;
